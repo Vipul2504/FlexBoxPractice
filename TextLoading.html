@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+        }
+        .center{
+    
+            height: 15rem;
+            width: 15rem;
+            /* justify-content: center;
+            display: flex;
+            align-items: center; */
+           position: relative;
+        }
+        .rot{
+            height: 15rem;
+            width: 15rem;
+            position: absolute;
+            border-radius: 50% ;
+            border-top:0.3rem solid rgb(255, 255, 255) ;
+            background: transparent;
+            animation: loader 2s linear infinite;
+        }
+
+        .center h1{
+            position: sticky;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+        }
+        @keyframes loader{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <div class="rot"></div>
+            <h1>PAWAN</h1>
+        </div>
+    </div>
+</body>
+</html>

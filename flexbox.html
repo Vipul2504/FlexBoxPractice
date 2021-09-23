@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/013f80aaa4.js" crossorigin="anonymous"></script>
+    <title>FlexBox</title>
+    <style>
+        *, *::before, *::after{
+            box-sizing: inherit;
+        }
+
+        html{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+        }
+        a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            text-align: center;
+            font-weight: 100;
+            letter-spacing: 2px;
+            padding:20px 5px;
+            display: inline-block;
+            width: 100%;
+            transition: all 0.5s;
+            width: 100%;
+        }
+        .Navbar ul{
+            border: 1px solid black;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+          
+        }
+        a:hover {
+  background:rgba(0,0,0,0.3);
+}
+        .Navbar li{
+            flex: 3;
+        }
+        .Navbar .social{
+            flex: 1;
+        }
+        .wrapper{
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px;
+
+        }
+
+        @media all and (max-width:1000px){
+            .Navbar ul{
+               
+                flex-wrap: wrap;
+            }
+            .Navbar li{
+                flex: 1 1 50%;
+
+            }
+            .Navbar .social{
+                flex: 1 1 25%;
+            }
+        }
+        @media all and (max-width:500px){
+            /* .Navbar ul{
+               
+                flex-wrap: wrap;
+            } */
+            .Navbar li{
+                flex-basis:50%;
+
+            }
+            /* .Navbar .social{
+                flex: 1 1 25%;
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <nav class="Navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">blog</a></li>
+            <li><a href="">Education</a></li>
+            <li><a href="">Skills</a></li>
+            <li><a href="">Contact</a></li>
+            <li class="social">
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+            </li>
+            <li class="social">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </li>
+            <li class="social">
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+            </li>
+            <li class="social">
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(214, 112, 112);
+        }
+        .main{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .searchtext{
+            width: 0rem;
+            border: none;
+            outline: none;
+            border-radius: 5rem;
+            transition: all 0.2s linear;
+        }
+        .searchtext:focus{
+            outline: none;
+        }
+        .searchbtn{
+            width: 5rem;
+            height: 5rem;
+            color: aliceblue;
+            right: 1rem;
+            background-color: rgb(214, 112, 112);
+            position: absolute;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+        }
+        .main:hover > .searchtext{
+            width: 25rem;
+            padding: 2rem;
+        }
+        .main:hover >.searchbtn{
+            background: rgb(44, 40, 40);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="text" class="searchtext" placeholder="Type to search">
+        <a href="" class="searchbtn">
+            <i class="fas fa-search fa-3x"></i>
+        </a>
+    </div>
+</body>
+</html>

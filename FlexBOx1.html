@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            color: white;
+            font-size: 100px;
+            text-align: center;
+            text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+            padding: 10px;
+            /* width: 33.33%; */
+            flex: 3;
+        }
+        .box-1{background-color: aqua;}
+        .box-2{background-color:blue;}
+        .box-3{background-color:green;}
+        .box-4{background-color:red;}
+        .box-5{background-color:violet;}
+        .box-6{background-color:yellow;}
+        .box-7{background-color:grey;}
+        .box-8{background-color:skyblue;}
+        .box-9{background-color: orange;}
+        .box-10{background-color:silver;}
+
+        .content{
+            display: flex;
+            min-height: 100vh;
+            border: 10px solid black;
+            /* justify-content:center ; */
+            /* flex-wrap: wrap; */
+        }
+        .box-2{
+            /* order: -1;
+            order: 3; */
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <div class="box box-6">6</div>
+        <div class="box box-7">7</div>
+        <div class="box box-8">8</div>
+        <div class="box box-9">9</div>
+        <div class="box box-10">10</div>
+    </div>
+</body>
+</html>

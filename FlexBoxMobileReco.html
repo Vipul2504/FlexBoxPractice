@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/013f80aaa4.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: inherit;
+            outline: none;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+        }
+
+        a:hover {
+            background: rgba(71, 71, 71, 0.3);
+        }
+
+        .toggleNav {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        input {
+            padding: 10px;
+            border: 0;
+        }
+
+        section,
+        footer {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px 0;
+            color: white;
+            font-weight: 100;
+        }
+        .Navbar ul {
+  border:1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.Navbar li{
+    flex: 1;
+}
+.Navbar .social{
+    flex: 1;
+}
+
+@media all and (max-width:1000px) {
+    .Navbar ul{
+        flex-wrap: wrap;
+    }
+    .Navbar li{
+        flex: 1 1 50%;
+    }
+    .Navbar .social{
+        flex: 3 1 25%;
+    }
+
+}
+
+
+@media all and (max-width:500px) {
+  .Navbar li{
+      flex-basis: 100%;
+  }
+  .wrapper{
+      display: flex;
+      flex-direction: column;
+  }
+  .wrapper > * {
+      order: 9999;
+  }
+  .Navbar{
+      order: 1;
+  }
+  .toggleNav{
+      display: block;
+  }
+  .Navbar ul{
+      display: none;
+  }
+  .Navbar ul .open{
+      display: flex;
+  }
+  .top{
+      order: 2;
+  }
+  /* Details */
+  .details {
+    order:3;
+  }
+
+  /* Sign Up */
+  .signup {
+    order:4;
+  }
+33333
+}
+
+        a {
+            color: white;
+            font-weight: 100;
+            text-decoration: none;
+            padding: 20px 5px;
+            letter-spacing: 2px;
+            transition: all 0.5s;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="top">
+            <h1><a href="">What The FlexBox</a></h1>
+        </header>
+        <nav class="Navbar">
+            <a href="" class="toggleNav">☰ Menu</a>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">blog</a></li>
+                <li><a href="">Education</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Contact</a></li>
+                <li class="social">
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </li>
+                <li class="social">
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li class="social">
+                    <a href="#"><i class="fab fa-instagram-square"></i></a>
+                </li>
+                <li class="social">
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                </li>
+
+            </ul>
+        </nav>
+        <section class="hero">
+            <img src="http://lorempixel.com/1000/600/abstract">
+        </section>
+
+        <section class="details">
+            <p>A simple video course to help you master FlexBox.</p>
+            <p>Sign up today to grab all the videos and exercises!</p>
+        </section>
+
+        <section class="signup">
+            <form action="" class="signup">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email Address">
+                <input type="submit" value="Sign me up!">
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; Wes Bos</p>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+            $('.toggleNav').on('click', function () {
+                $('.Navbar ul').toggleClass('open');
+            });
+        });
+
+    </script>
+</body>
+
+</html>

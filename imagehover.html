@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        :root{
+            --trans : all 0.4s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .main {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(97, 173, 173);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .center {
+            width: 30vw;
+            height: 80vh;
+            background-color: blueviolet;
+            position: relative;
+        }
+
+        .center img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .center .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-color: antiquewhite; */
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            color: rgb(185, 95, 11);
+            opacity: 0;
+            transition: var(--trans);
+
+        }
+
+        .center .caption h1{
+            text-transform: uppercase;
+            font-size: 2rem;
+            margin-top: 50rem;
+            transition: var(--trans);
+        }
+        .center .caption p{
+            font-size: 2rem;
+        }
+        .center:hover img{
+            transform: scale(1.2);
+            transition: var(--trans);
+        }
+        .center:hover .caption{
+            opacity: 1;
+        }
+        .center:hover .caption h1{
+            margin-top: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="center">
+            <img src="zhangzui-k1BW0k8kGbk-unsplash.jpg" alt="">
+            <div class="caption">
+                <h1>1 milion followers</h1>
+                <p>Thank you so much</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
