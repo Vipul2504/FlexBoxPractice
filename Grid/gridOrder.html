@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *,
+        *::before,
+        *::after {
+            box-sizing: inherit;
+        }
+
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+            margin: 40px;
+            min-height: calc(100vh - 80px);
+
+
+        }
+
+        html {
+            font-weight: 900;
+            font-size: 10px;
+        }
+        .item {
+            /* We center the contents of these items. You can also do this with flexbox too! */
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid rgba(0, 0, 0, 0.03);
+            border-radius: 3px;
+            font-size: 25px;
+            background-color: yellow;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 20px;
+            /* grid-template-columns: repeat(auto-fit,100px); */
+            /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); for responisve */
+            /* grid-template-columns: repeat(10,1fr);
+            grid-auto-flow: dense; */
+            grid-template-columns: repeat(10,1fr);
+            grid-template-rows: repeat(3,30px);
+        }
+
+        .logo{
+            grid-column: span 2;
+            grid-row: span 2;
+            order: 1;
+        }
+        .nav{
+            grid-column: span 8;
+            order: 2;
+        }
+        .con{
+            grid-column: -1/3;
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item nav">NavBar</div>
+        <div class="item logo">Logo</div>
+        <div class="item con">Content</div>
+    </div>
+</body>
+</html>
