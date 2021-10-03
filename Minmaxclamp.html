@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minmaxclamp</title>
+    <style>
+         *, *::before, *::after{
+            box-sizing: inherit;
+        }
+
+        html{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .box{
+            color: burlywood;
+            background-color: yellowgreen;
+            padding: 1.5rem;
+            font-size: clamp(2rem, .5rem, 4rem);
+        }
+
+        .text{
+            margin: 0 0 0.5rem;
+            line-height: .8;
+            font-weight: 900;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2 class="text">This is Excercise</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In neque consequuntur voluptates tempore quis necessitatibus, obcaecati iste nam ipsam? Earum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ea expedita consequuntur perspiciatis dolores numquam, atque sint natus incidunt quia!</p>
+    </div>
+</body>
+</html>
